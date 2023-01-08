@@ -1081,7 +1081,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   night: {r: 0.02745098, g: 0.03137255, b: 0.14117648, a: 1}
-  dayLength: 10
+  dayLength: 60
   nightLength: 10
 --- !u!1 &671305454
 GameObject:
