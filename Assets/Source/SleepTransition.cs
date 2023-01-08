@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class SleepTransition : MonoBehaviour
@@ -35,6 +36,7 @@ public class SleepTransition : MonoBehaviour
             world.OvernightProcess();
         } else {
             died.SetActive(true);
+            died.GetComponent<TMP_Text>().text += $"after {days} days";
             SoundManager.PlaySound(SoundManager.Effect.DeathScreen);
             SceneLoader.StartLoadScene("Menu");
         }
