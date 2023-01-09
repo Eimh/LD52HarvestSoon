@@ -59,6 +59,10 @@ public class PlayerController : MonoBehaviour {
         Debug.Log("Used");
         Vector2Int pos = new Vector2Int((int)selector.transform.position.x, (int)selector.transform.position.y);
         Item item = inventory.GetItem(inventory.GetSelected());
+        if (item == null) {
+            SoundManager.PlaySound(SoundManager.Effect.Invalid);
+            return;
+        }
         if (item.Use(pos, world, this)) {
             inventory.Remove(inventory.GetSelected());
         }
